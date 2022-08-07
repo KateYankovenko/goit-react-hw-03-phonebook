@@ -16,13 +16,13 @@ export class App extends Component {
     filter: '',
   };
 
-  // componentDidMount() {
-  //   const savedContacts = localStorage.getItem('contacts');
-  //   const parsedContacts = JSON.parse(savedContacts);
-  //   if (parsedContacts) {
-  //     this.setState({ contacts: parsedContacts });
-  // }  
-  // }
+  componentDidMount() {
+    const savedContacts = localStorage.getItem('contacts');
+    const parsedContacts = JSON.parse(savedContacts);
+    if (parsedContacts) {
+      this.setState({ contacts: parsedContacts });
+  }  
+  }
   
   componentDidUpdate(prevProps, prevState) {
     if (prevState.contacts !== this.state.contacts) {
@@ -76,6 +76,20 @@ export class App extends Component {
   }
 }
 
+
+  // componentDidMount() {
+  //   const savedContacts = localStorage.getItem('contacts');
+  //   const parsedContacts = JSON.parse(savedContacts);
+  //   if (parsedContacts) {
+  //     this.setState({ contacts: parsedContacts });
+  // }  
+  // }
+  
+  // componentDidUpdate(prevProps, prevState) {
+  //   if (prevState.contacts !== this.state.contacts) {
+  //     localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
+  //   }
+  // }
 
 // export const App = () => {
 //   return (
